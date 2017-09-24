@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Divinity 2 Wiki Skill Popup",
+  "description": "Hover popups of class skills when on the main wiki skill page",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "dos-icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://divinityoriginalsin2.wiki.fextralife.com/Skills"],
+      "js": ["jquery.min.js","jquery.hoverIntent.min.js","parser.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
