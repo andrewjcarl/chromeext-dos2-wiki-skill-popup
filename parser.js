@@ -17,6 +17,7 @@ function render(popup) {
     'bottom'    : '10px',
     'background': 'rgba(0,0,0,.95)'
   });
+  $(popup).addClass('divinity-2-helper-popup');
   $('html').append(popup);
 }
 
@@ -34,7 +35,7 @@ function toggle() {
 }
 
 function dismiss() {
-  $('#infobox').remove();
+  $('.divinity-2-helper-popup').remove();
 }
 
 $.each(skills, function(i, skill) {
