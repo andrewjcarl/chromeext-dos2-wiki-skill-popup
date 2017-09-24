@@ -2,15 +2,18 @@
   "manifest_version": 2,
   "name": "Divinity 2 Original Sin: Wiki Skill Popup",
   "description": "Hover popups of class skills when on the main wiki skill page",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "browser_action": {
-    "default_icon": "dos-icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "dos-icon.png"
   },
   "permissions": [
     "activeTab",
     "storage"
   ],
+  "background": {
+    "persistent": false,
+    "scripts": ["badge.js"]
+  },
   "content_scripts": [
     {
       "matches": ["http://divinityoriginalsin2.wiki.fextralife.com/Skills"],
